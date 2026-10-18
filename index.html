@@ -122,6 +122,9 @@ body {
 }
 .line.show { opacity: 1; transform: none; filter: none; }
 .date { color: var(--muted); font-style: italic; }
+.line.verse { font-style: italic; color: var(--accent); padding: 16px 12px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); }
+.line.verse .ref { display: block; margin-top: 6px; font-family: var(--head); font-style: normal; font-size: .8rem; letter-spacing: .14em; color: var(--muted); }
+.sign .grp { display: block; margin-top: 8px; font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--muted); }
 .greet { font-family: var(--script); font-weight: 400; font-size: clamp(2.5rem, 9vw, 3.3rem); line-height: 1.1; color: var(--accent); }
 .sign { font-family: var(--script); font-weight: 400; font-size: clamp(2rem, 8vw, 2.7rem); line-height: 1.1; color: var(--accent); margin-bottom: 0; }
 .line.details {
@@ -190,13 +193,20 @@ body {
     <span class="badge">EKD</span>
     <div class="rule" aria-hidden="true">✦</div>
 
-    <p class="line date">October 18, 2026</p>
+    
     <p class="line greet">Dear Alex,</p>
-    <p class="line">I’m inviting you to something close to my heart: an Encouragement Kingdom Date, or EKD for short.</p>
-    <p class="line">It’s a simple time set apart for good company, honest words, and lifting each other up. No pressure, no performance, just encouragement. Let’s live out 1 Thessalonians 5:11 together.</p>
-    <div class="line details"><dl><dt>WHEN</dt><dd>[Date and time]</dd><dt>WHERE</dt><dd>[Place]</dd><dt>BRING</dt><dd>Your lovely self</dd></dl></div>
-    <p class="line">Say yes below and I’ll save you a seat. I can’t wait to see you.</p>
-    <p class="line sign">With love,<br>Sam</p>
+    <p class="line">Greetings in the wonderful name of our Lord and Savior, Jesus Christ!</p>
+    <p class="line">It is with a joyful heart that I invite you to join us for our Encouragement Kingdom Date (EKD)! ❤️</p>
+    <p class="line">This gathering is a special opportunity for us to fellowship, share God’s love, encourage one another, and grow together in our walk with the Lord. Life can sometimes be challenging, and there are moments when we feel tired, discouraged, or overwhelmed. But God reminds us that we are never alone, and He uses people to strengthen and encourage us along the way.</p>
+    <p class="line">As it says in 1 Thessalonians 5:11 (NIV):</p>
+    <p class="line verse">“Therefore encourage one another and build each other up, just as in fact you are doing.”</p>
+    <p class="line">Through this verse, we are reminded of the importance of uplifting one another and sharing the hope we have in Christ. I believe that EKD will be a wonderful time to experience God’s presence, receive encouragement from His Word, and create meaningful memories with our brothers and sisters in Christ.</p>
+    <div class="line details"><dl><dt>WHEN</dt><dd>Saturday, November 21, 2026 · 4:00 PM</dd><dt>WHERE</dt><dd>Grace Fellowship Hall, Garden Room</dd><dt>BRING</dt><dd>An open heart</dd></dl></div>
+    <p class="line">I sincerely hope you can join us! Your presence would make this gathering even more special. Please come with an open heart, ready to be encouraged, to encourage others, and to experience the goodness and faithfulness of God.</p>
+    <p class="line">May this be more than just a gathering, but a meaningful encounter that strengthens our faith and reminds us of the beauty of walking together in Christ.</p>
+    <p class="line">I look forward to seeing you there! May God bless you abundantly. Remember, you are loved, valued, and never alone in your journey with Him.</p>
+    <p class="line">See you at EKD! God bless you! ❤️🙏</p>
+    <p class="line sign">With love and prayers,<br>Sam<span class="grp">Grace Fellowship</span></p>
 
     <div class="actions" id="actions">
       <button class="btn love" id="love">Accept the invitation</button>
@@ -251,8 +261,8 @@ body {
   }
 
   function play(delay) {
-    lines.forEach(function (l, k) { later(function () { l.classList.add('show'); }, delay + k * 1000); });
-    later(function () { actions.classList.add('show'); }, delay + lines.length * 1000);
+    lines.forEach(function (l, k) { later(function () { l.classList.add('show'); }, delay + k * 800); });
+    later(function () { actions.classList.add('show'); }, delay + lines.length * 800);
   }
 
   seal.addEventListener('click', function () {
