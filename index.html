@@ -1,146 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>You’re invited · EKD</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>You’re invited · EKD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="sky" id="sky" aria-hidden="true">
-  <svg class="castle" viewBox="0 0 600 120" preserveAspectRatio="xMidYMax slice" fill="currentColor">
-    <rect x="0" y="92" width="600" height="28"/>
-    <rect x="40" y="58" width="42" height="62"/><polygon points="34,58 61,24 88,58"/>
-    <rect x="130" y="76" width="70" height="44"/>
-    <rect x="250" y="34" width="60" height="86"/><polygon points="242,34 280,0 318,34"/>
-    <rect x="262" y="52" width="10" height="16" fill="#e8b93f" opacity=".7"/>
-    <rect x="352" y="72" width="70" height="48"/>
-    <rect x="470" y="52" width="46" height="68"/><polygon points="463,52 493,18 523,52"/>
-    <rect x="552" y="80" width="48" height="40"/>
-  </svg>
-</div>
-<main class="stage">
+  <div class="sky" id="sky" aria-hidden="true">
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <svg class="castle" viewBox="0 0 600 120" preserveAspectRatio="xMidYMax slice" fill="currentColor">
+      <rect x="0" y="92" width="600" height="28" />
+      <rect x="40" y="58" width="42" height="62" />
+      <polygon points="34,58 61,24 88,58" />
+      <rect x="130" y="76" width="70" height="44" />
+      <rect x="250" y="34" width="60" height="86" />
+      <polygon points="242,34 280,0 318,34" />
+      <rect x="262" y="52" width="10" height="16" fill="#e8b93f" opacity=".7" />
+      <rect x="352" y="72" width="70" height="48" />
+      <rect x="470" y="52" width="46" height="68" />
+      <polygon points="463,52 493,18 523,52" />
+      <rect x="552" y="80" width="48" height="40" />
+    </svg>
+  </div>
+  <main class="stage">
 
-  <section id="envWrap">
-    <div class="env" id="env">
-      <div class="peek" aria-hidden="true">You’re invited…</div>
-      <div class="flap"></div>
-      <div class="pocket"></div>
-      <div class="address">For Alex<small>BY ROYAL INVITATION</small></div>
-      <button class="seal" id="seal" aria-label="Break the royal seal and open your invitation">
-        <svg viewBox="0 0 64 48" aria-hidden="true"><path d="M6 40 L2 12 L18 24 L32 6 L46 24 L62 12 L58 40 Z" fill="currentColor"/><rect x="6" y="42" width="52" height="5" rx="2" fill="currentColor"/></svg>
-      </button>
-    </div>
-    <p class="hint" id="hint">Tap the royal seal to open</p>
-  </section>
+    <section id="envWrap">
+      <div class="env" id="env">
+        <div class="peek" aria-hidden="true">You’re invited…</div>
+        <div class="flap"></div>
+        <div class="pocket"></div>
+        <div class="address">For Kimara<small>BY FRANCIS INVITATION</small></div>
+        <button class="seal" id="seal" aria-label="Break the royal seal and open your invitation">
+          <div class="seal-rim" aria-hidden="true"></div>
+          <svg viewBox="0 0 64 48" aria-hidden="true">
+            <path d="M6 40 L2 12 L18 24 L32 6 L46 24 L62 12 L58 40 Z" fill="currentColor" />
+            <rect x="6" y="42" width="52" height="5" rx="2" fill="currentColor" />
+            <circle cx="32" cy="5" r="3.5" fill="currentColor" />
+            <circle cx="2" cy="11" r="3" fill="currentColor" />
+            <circle cx="62" cy="11" r="3" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+      <p class="hint" id="hint">Tap the royal seal to open</p>
+    </section>
 
-  <article class="letter" id="letter" hidden>
-    <svg class="crown" viewBox="0 0 64 48" aria-hidden="true"><path d="M6 40 L2 12 L18 24 L32 6 L46 24 L62 12 L58 40 Z" fill="currentColor"/><rect x="6" y="42" width="52" height="5" rx="2" fill="currentColor"/><circle cx="32" cy="5" r="3.5" fill="currentColor"/><circle cx="2" cy="11" r="3" fill="currentColor"/><circle cx="62" cy="11" r="3" fill="currentColor"/></svg>
-    <h1 class="ekd-title">Encouragement Kingdom Date</h1>
-    <span class="badge">EKD</span>
-    <div class="rule" aria-hidden="true">✦</div>
+    <article class="letter" id="letter" hidden>
+      <!-- Corner filigree flourishes -->
+      <svg class="corner corner-tl" viewBox="0 0 54 54" aria-hidden="true">
+        <path d="M4 50 V18 C4 10.3 10.3 4 18 4 H50" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 44 V20 C8 13.4 13.4 8 20 8 H44" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="4" cy="4" r="3" fill="currentColor"/>
+        <circle cx="28" cy="4" r="1.5" fill="currentColor"/>
+        <circle cx="4" cy="28" r="1.5" fill="currentColor"/>
+        <path d="M4 4 L14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M14 4 C14 9.5 9.5 14 4 14" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M12 12 Q22 22 30 12 Q22 22 12 30" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.75"/>
+      </svg>
+      <svg class="corner corner-tr" viewBox="0 0 54 54" aria-hidden="true">
+        <path d="M4 50 V18 C4 10.3 10.3 4 18 4 H50" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 44 V20 C8 13.4 13.4 8 20 8 H44" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="4" cy="4" r="3" fill="currentColor"/>
+        <circle cx="28" cy="4" r="1.5" fill="currentColor"/>
+        <circle cx="4" cy="28" r="1.5" fill="currentColor"/>
+        <path d="M4 4 L14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M14 4 C14 9.5 9.5 14 4 14" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M12 12 Q22 22 30 12 Q22 22 12 30" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.75"/>
+      </svg>
+      <svg class="corner corner-bl" viewBox="0 0 54 54" aria-hidden="true">
+        <path d="M4 50 V18 C4 10.3 10.3 4 18 4 H50" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 44 V20 C8 13.4 13.4 8 20 8 H44" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="4" cy="4" r="3" fill="currentColor"/>
+        <circle cx="28" cy="4" r="1.5" fill="currentColor"/>
+        <circle cx="4" cy="28" r="1.5" fill="currentColor"/>
+        <path d="M4 4 L14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M14 4 C14 9.5 9.5 14 4 14" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M12 12 Q22 22 30 12 Q22 22 12 30" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.75"/>
+      </svg>
+      <svg class="corner corner-br" viewBox="0 0 54 54" aria-hidden="true">
+        <path d="M4 50 V18 C4 10.3 10.3 4 18 4 H50" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 44 V20 C8 13.4 13.4 8 20 8 H44" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="4" cy="4" r="3" fill="currentColor"/>
+        <circle cx="28" cy="4" r="1.5" fill="currentColor"/>
+        <circle cx="4" cy="28" r="1.5" fill="currentColor"/>
+        <path d="M4 4 L14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M14 4 C14 9.5 9.5 14 4 14" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M12 12 Q22 22 30 12 Q22 22 12 30" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.75"/>
+      </svg>
 
-    
-    <p class="line greet">Dear Alex,</p>
-    <p class="line">Greetings in the wonderful name of our Lord and Savior, Jesus Christ!</p>
-    <p class="line">It is with a joyful heart that I invite you to join us for our Encouragement Kingdom Date (EKD)! ❤️</p>
-    <p class="line">This gathering is a special opportunity for us to fellowship, share God’s love, encourage one another, and grow together in our walk with the Lord. Life can sometimes be challenging, and there are moments when we feel tired, discouraged, or overwhelmed. But God reminds us that we are never alone, and He uses people to strengthen and encourage us along the way.</p>
-    <p class="line">As it says in 1 Thessalonians 5:11 (NIV):</p>
-    <p class="line verse">“Therefore encourage one another and build each other up, just as in fact you are doing.”</p>
-    <p class="line">Through this verse, we are reminded of the importance of uplifting one another and sharing the hope we have in Christ. I believe that EKD will be a wonderful time to experience God’s presence, receive encouragement from His Word, and create meaningful memories with our brothers and sisters in Christ.</p>
-    <div class="line details"><dl><dt>WHEN</dt><dd>Saturday, November 21, 2026 · 4:00 PM</dd><dt>WHERE</dt><dd>Grace Fellowship Hall, Garden Room</dd><dt>BRING</dt><dd>An open heart</dd></dl></div>
-    <p class="line">I sincerely hope you can join us! Your presence would make this gathering even more special. Please come with an open heart, ready to be encouraged, to encourage others, and to experience the goodness and faithfulness of God.</p>
-    <p class="line">May this be more than just a gathering, but a meaningful encounter that strengthens our faith and reminds us of the beauty of walking together in Christ.</p>
-    <p class="line">I look forward to seeing you there! May God bless you abundantly. Remember, you are loved, valued, and never alone in your journey with Him.</p>
-    <p class="line">See you at EKD! God bless you! ❤️🙏</p>
-    <p class="line sign">With love and prayers,<br>Sam<span class="grp">Grace Fellowship</span></p>
+      <!-- Royal Watermark Crest -->
+      <div class="watermark" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
+          <circle cx="100" cy="100" r="92" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <circle cx="100" cy="100" r="84" stroke-width="0.75"/>
+          <circle cx="100" cy="100" r="68" stroke-width="1"/>
+          <path d="M62 126 L52 88 L76 104 L100 78 L124 104 L148 88 L138 126 Z" stroke-width="1.5" fill="currentColor" fill-opacity="0.1"/>
+          <path d="M54 130 H146" stroke-width="2.5"/>
+          <circle cx="100" cy="74" r="3" fill="currentColor"/>
+          <circle cx="52" cy="85" r="2.5" fill="currentColor"/>
+          <circle cx="148" cy="85" r="2.5" fill="currentColor"/>
+          <path d="M100 18 V34 M100 166 V182 M18 100 H34 M166 100 H182" stroke-width="1.2"/>
+          <path d="M42 42 L54 54 M146 146 L158 158 M158 42 L146 54 M42 158 L54 146" stroke-width="0.8"/>
+        </svg>
+      </div>
 
-    <div class="actions" id="actions">
-      <button class="btn love" id="love">Accept the invitation</button>
-      <a class="btn" id="confirm" hidden href="mailto:?subject=EKD%3A%20Yes%2C%20I%E2%80%99ll%20be%20there!">Let Sam know</a>
-      <button class="btn" id="again">Read it again</button>
-    </div>
-  </article>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="goldRuleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="var(--gold)" stop-opacity="0"/>
+            <stop offset="50%" stop-color="var(--gold)" stop-opacity="1"/>
+            <stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
 
-</main>
-<script>
-(function () {
-  var env = document.getElementById('env'), wrap = document.getElementById('envWrap');
-  var letter = document.getElementById('letter'), actions = document.getElementById('actions');
-  var lines = letter.querySelectorAll('.line'), seal = document.getElementById('seal');
-  var timers = [];
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function later(fn, ms) { timers.push(setTimeout(fn, reduce ? 0 : ms)); }
+      <svg class="crown" viewBox="0 0 64 48" aria-hidden="true">
+        <path d="M6 40 L2 12 L18 24 L32 6 L46 24 L62 12 L58 40 Z" fill="currentColor" />
+        <rect x="6" y="42" width="52" height="5" rx="2" fill="currentColor" />
+        <circle cx="32" cy="5" r="3.5" fill="currentColor" />
+        <circle cx="2" cy="11" r="3" fill="currentColor" />
+        <circle cx="62" cy="11" r="3" fill="currentColor" />
+      </svg>
+      <h1 class="ekd-title">Encouragement Kingdom Date</h1>
+      <span class="badge">EKD</span>
+      <div class="rule" aria-hidden="true">
+        <svg class="rule-ornament" viewBox="0 0 300 24" fill="none">
+          <path d="M0 12 H110 M190 12 H300" stroke="url(#goldRuleGrad)" stroke-width="1.2"/>
+          <circle cx="110" cy="12" r="2" fill="var(--gold)"/>
+          <circle cx="190" cy="12" r="2" fill="var(--gold)"/>
+          <path d="M120 12 C128 7 136 7 150 12 C164 17 172 17 180 12 C172 7 164 7 150 12 C136 17 128 17 120 12 Z" fill="var(--gold)" opacity="0.9"/>
+          <circle cx="150" cy="12" r="3" fill="var(--gold-hi)"/>
+          <circle cx="134" cy="12" r="1.5" fill="var(--gold)"/>
+          <circle cx="166" cy="12" r="1.5" fill="var(--gold)"/>
+        </svg>
+      </div>
 
-  // twinkling stars
-  var sky = document.getElementById('sky');
-  for (var i = 0; i < 34; i++) {
-    var s = document.createElement('span');
-    s.className = 'star';
-    s.textContent = Math.random() > .5 ? '✦' : '✧';
-    s.style.left = (Math.random() * 100) + '%';
-    s.style.top = (Math.random() * 70) + '%';
-    s.style.fontSize = (0.6 + Math.random() * 0.9) + 'rem';
-    s.style.animationDuration = (2.5 + Math.random() * 3.5) + 's';
-    s.style.animationDelay = (-Math.random() * 5) + 's';
-    sky.insertBefore(s, sky.firstChild);
-  }
+      <p class="line greet">Dear Kimara,</p>
+      <p class="line">Greetings in the wonderful name of our Lord and Savior, Jesus Christ!</p>
+      <p class="line">It is with a joyful heart that I invite you to join us for our Encouragement Kingdom Date (EKD)!
+        ❤️</p>
+      <p class="line">This gathering is a special opportunity for us to fellowship, share God’s love, encourage one
+        another, and grow together in our walk with the Lord. Life can sometimes be challenging, and there are moments
+        when we feel tired, discouraged, or overwhelmed. But God reminds us that we are never alone, and He uses people
+        to strengthen and encourage us along the way.</p>
+      <p class="line">As it says in 1 Thessalonians 5:11 (NIV):</p>
+      <p class="line verse">“Therefore encourage one another and build each other up, just as in fact you are doing.”
+      </p>
+      <p class="line">Through this verse, we are reminded of the importance of uplifting one another and sharing the
+        hope we have in Christ. I believe that EKD will be a wonderful time to experience God’s presence, receive
+        encouragement from His Word, and create meaningful memories with our brothers and sisters in Christ.</p>
+      <div class="line details">
+        <dl>
+          <dt>WHEN</dt>
+          <dd>Saturday, November 29, 2026 · 4:00 PM</dd>
+          <dt>WHERE</dt>
+          <dd>TBA</dd>
+          <dt>BRING</dt>
+          <dd>An open heart</dd>
+        </dl>
+      </div>
+      <p class="line">I sincerely hope you can join us! Your presence would make this gathering even more special.
+        Please come with an open heart, ready to be encouraged, to encourage others, and to experience the goodness and
+        faithfulness of God.</p>
+      <p class="line">May this be more than just a gathering, but a meaningful encounter that strengthens our faith and
+        reminds us of the beauty of walking together in Christ.</p>
+      <p class="line">I look forward to seeing you there! May God bless you abundantly. Remember, you are loved, valued,
+        and never alone in your journey with Him.</p>
+      <p class="line">See you at EKD! God bless you! ❤️🙏</p>
+      <p class="line sign">With love and prayers,<br>Kimara</p>
 
-  // golden sparkle burst, from a point or the lower middle
-  var symbols = ['✦', '✧', '♛', '✦'];
-  function sparkle(n, x, y) {
-    for (var j = 0; j < n; j++) {
-      (function (j) {
-        setTimeout(function () {
-          var h = document.createElement('span');
-          h.className = 'spark';
-          h.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-          h.style.left = (x != null ? x : window.innerWidth * (0.2 + Math.random() * 0.6)) + 'px';
-          h.style.top = (y != null ? y : window.innerHeight * 0.8) + 'px';
-          h.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
-          h.style.setProperty('--rot', (Math.random() * 80 - 40) + 'deg');
-          h.style.fontSize = (1 + Math.random() * 1.4) + 'rem';
-          document.body.appendChild(h);
-          setTimeout(function () { h.remove(); }, 2500);
-        }, j * 80);
-      })(j);
-    }
-  }
+      <div class="actions" id="actions">
+        <button class="btn love" id="love">Accept the invitation</button>
+        <button class="btn" id="again">Read it again</button>
+      </div>
+    </article>
 
-  function play(delay) {
-    lines.forEach(function (l, k) { later(function () { l.classList.add('show'); }, delay + k * 800); });
-    later(function () { actions.classList.add('show'); }, delay + lines.length * 800);
-  }
+  </main>
+  <script>
+    (function () {
+      var env = document.getElementById('env'), wrap = document.getElementById('envWrap');
+      var letter = document.getElementById('letter'), actions = document.getElementById('actions');
+      var lines = letter.querySelectorAll('.line'), seal = document.getElementById('seal');
+      var timers = [];
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function later(fn, ms) { timers.push(setTimeout(fn, reduce ? 0 : ms)); }
 
-  seal.addEventListener('click', function () {
-    env.classList.add('opened');
-    document.getElementById('hint').textContent = '';
-    sparkle(10);
-    later(function () { env.classList.add('gone'); }, 2000);
-    later(function () { wrap.hidden = true; letter.hidden = false; window.scrollTo(0, 0); play(300); }, 2500);
-  });
+      // twinkling stars
+      var sky = document.getElementById('sky');
+      for (var i = 0; i < 34; i++) {
+        var s = document.createElement('span');
+        s.className = 'star';
+        s.textContent = Math.random() > .5 ? '✦' : '✧';
+        s.style.left = (Math.random() * 100) + '%';
+        s.style.top = (Math.random() * 70) + '%';
+        s.style.fontSize = (0.6 + Math.random() * 0.9) + 'rem';
+        s.style.animationDuration = (2.5 + Math.random() * 3.5) + 's';
+        s.style.animationDelay = (-Math.random() * 5) + 's';
+        sky.insertBefore(s, sky.firstChild);
+      }
 
-  document.getElementById('love').addEventListener('click', function () {
-    sparkle(26);
-    this.textContent = 'See you there!';
-    document.getElementById('confirm').hidden = false;
-  });
+      // golden sparkle burst, from a point or the lower middle
+      var symbols = ['✦', '✧', '♛', '✦'];
+      function sparkle(n, x, y) {
+        for (var j = 0; j < n; j++) {
+          (function (j) {
+            setTimeout(function () {
+              var h = document.createElement('span');
+              h.className = 'spark';
+              h.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+              h.style.left = (x != null ? x : window.innerWidth * (0.2 + Math.random() * 0.6)) + 'px';
+              h.style.top = (y != null ? y : window.innerHeight * 0.8) + 'px';
+              h.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+              h.style.setProperty('--rot', (Math.random() * 80 - 40) + 'deg');
+              h.style.fontSize = (1 + Math.random() * 1.4) + 'rem';
+              document.body.appendChild(h);
+              setTimeout(function () { h.remove(); }, 2500);
+            }, j * 80);
+          })(j);
+        }
+      }
 
-  document.getElementById('again').addEventListener('click', function () {
-    timers.forEach(clearTimeout); timers = [];
-    lines.forEach(function (l) { l.classList.remove('show'); });
-    actions.classList.remove('show');
-    window.scrollTo(0, 0);
-    play(400);
-  });
+      function play(delay) {
+        lines.forEach(function (l, k) { later(function () { l.classList.add('show'); }, delay + k * 800); });
+        later(function () { actions.classList.add('show'); }, delay + lines.length * 800);
+      }
 
-  letter.addEventListener('click', function (e) {
-    if (e.target.closest('.btn')) return;
-    sparkle(3, e.clientX, e.clientY);
-  });
-})();
-</script>
+      seal.addEventListener('click', function () {
+        env.classList.add('opened');
+        document.getElementById('hint').textContent = '';
+        sparkle(10);
+        later(function () { env.classList.add('gone'); }, 2000);
+        later(function () { wrap.hidden = true; letter.hidden = false; window.scrollTo(0, 0); play(300); }, 2500);
+      });
+
+      document.getElementById('love').addEventListener('click', function () {
+        sparkle(26);
+        this.textContent = 'See you there!';
+        var confirmBtn = document.getElementById('confirm');
+        if (confirmBtn) confirmBtn.hidden = false;
+      });
+
+      document.getElementById('again').addEventListener('click', function () {
+        timers.forEach(clearTimeout); timers = [];
+        lines.forEach(function (l) { l.classList.remove('show'); });
+        actions.classList.remove('show');
+        window.scrollTo(0, 0);
+        play(400);
+      });
+
+      letter.addEventListener('click', function (e) {
+        if (e.target.closest('.btn')) return;
+        sparkle(3, e.clientX, e.clientY);
+      });
+    })();
+  </script>
 </body>
+
 </html>
